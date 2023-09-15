@@ -1,0 +1,16 @@
+﻿@model Student
+
+<div class="card text-center">
+    <div class="card-header">
+        Ogrenci Bilgi
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Ogrenci Adı : @Model.Name</h5>
+        <p class="card-text"><b> Ogrenci Id si :</b>@Model.Id </p>
+        <p class="card-text"><b> Ogrenci soyadi :</b>@Model.SurName </p>
+
+        <p class="card-text"><b> Ogrenci telefon no :</b> @Model.PhoneNumber </p>
+        <p class="card-text"><b>Ogrenci maili :</b> @Model.Email </p>
+        <a asp-controller="Student" asp-action="Index" class="btn btn-primary">Ogrenci Listesine Geri Don.</a>
+    </div>
+</div>

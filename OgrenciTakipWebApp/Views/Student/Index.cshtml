@@ -1,0 +1,30 @@
+﻿@model List<Student>
+
+<table class="table table-success table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Yas</th>
+            <th scope="col">Aciklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Name</td>
+                <td>@item.SurName</td>
+                <td>@item.Email</td>
+                <td>@item.PhoneNumber</td>
+                <td><a asp-action="Details" asp-controller="Student" asp-route-id="@item.Id">Kartvizite Bak</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a asp-controller="Student" asp-action="Create" type="button" class="btn btn-primary">Ogrenci Ekle</a>
+
+
